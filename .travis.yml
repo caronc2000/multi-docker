@@ -15,7 +15,7 @@ after_success:
   - docker build -t caronc2000/multi-worker ./worker
   #Log in to docker CLI - enter docker credentials as env variables in travis
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # Take these images and push to docker hub
+  # Take these images and push to docker hub, need to change this so it reruns
   - docker push caronc2000/multi-client
   - docker push caronc2000/multi-nginx
   - docker push caronc2000/multi-server
